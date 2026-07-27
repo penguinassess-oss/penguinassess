@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>PenguinAssess | Teacher Rating</title>
+    <meta name="description" content="Penguin Assess is an interactive platform for HSC students to assess and discover 
+        the best subject and chapter-wise teachers of intermediate across major online learning platforms.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Penguin Assess | Teacher Rating</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://penguinassess.com/#website",
+          "url": "https://penguinassess.com/",
+          "name": "Penguin Assess",
+          "description": "Chapter-wise teacher rating platform for HSC subjects.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "EducationalApplication",
+          "@id": "https://penguinassess.com/#application",
+          "url": "https://penguinassess.com/",
+          "name": "Penguin Assess Teacher Evaluator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "All"
+        }
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -45,6 +72,12 @@
             z-index: 2;
         }
 
+        .hero-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
         .hero-title h1 {
             font-size: 1.8rem;
             font-weight: 800;
@@ -61,6 +94,13 @@
             color: #bc7a3c;
             margin-top: 4px;
             letter-spacing: 1px;
+        }
+        
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 50%;
         }
 
         .platform-badge {
@@ -364,8 +404,11 @@
 
 <div class="top-zone">
     <div class="hero-title">
-        <h1> Penguin Assess</h1>
-        <p>subjects · chapters · teacher — eternal ratings </p>
+        <img src="logo.png" alt="Penguin Assess Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+            <h1>Penguin Assess</h1>
+            <p>subjects · chapters · teacher — eternal ratings</p>
+        </div>
     </div>
     <div class="platform-badge">
         🍊 <strong>Smile on the junior folks giving your opinion on<br>Who is the "GOAT" on specific chapters..?</br></strong>
@@ -578,7 +621,7 @@
             { id: "t9", name: "Niaz Morshed Faysal, PM", imageurl: "Niaz.jpg" },
             { id: "t10", name: "SM Moniruzzaman, Hulkenstein", imageurl: "Monir.jpg" },
             { id: "t11", name: "Javed Jimi, Sikho", imageurl: "Jimi.jpg" },
-            { id: "t11", name: "ASM Anas Ferdous, Hulkenstein", imageurl: "Anas.jpg" }
+            { id: "t12", name: "ASM Anas Ferdous, Hulkenstein", imageurl: "Anas.jpg" }
         ];
         return attachSavedRatingsToTeachers(teachers, subjectId, chapterId);
     }
